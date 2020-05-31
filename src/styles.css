@@ -1,10 +1,11 @@
 /* https://materialtheme.arcsine.dev/ */
 
+@import 'https://fonts.googleapis.com/css?family=Material+Icons';
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500");
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-@import 'https://fonts.googleapis.com/css?family=Material+Icons';
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500");
 .mat-badge-content {
   font-weight: 600;
   font-size: 12px; }
