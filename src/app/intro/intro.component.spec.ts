@@ -8,9 +8,8 @@ describe('IntroComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ IntroComponent ]
-    })
-    .compileComponents();
+      declarations: [IntroComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -21,5 +20,12 @@ describe('IntroComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should render content', () => {
+    const compiled: HTMLElement = fixture.nativeElement;
+    expect(compiled.innerText).toContain(
+      'Software developer; Maker; Ultralight hiker'
+    );
   });
 });
