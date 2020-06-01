@@ -1,4 +1,12 @@
-<p>
+<!-- <p>
   I know you'd like to see some cool photography works,<br />
   And I'm sure the wait is going to be worth it but you'll have to be patient
-</p>
+</p> -->
+
+<div>
+  <mat-grid-list cols="2" rowHeight="2:1">
+      <mat-grid-tile *ngFor='let p of photoUrls'>
+          <img [src]='p' class="tile-image" >
+      </mat-grid-tile>
+  </mat-grid-list>
+</div>
