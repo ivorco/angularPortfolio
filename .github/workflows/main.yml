@@ -2,9 +2,9 @@ name: Test with Protractor and Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    branches: [ release ]
+  # pull_request:
+  #  branches: [ master ]
 
 jobs:
    build-and-deploy:
