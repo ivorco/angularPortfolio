@@ -1,3 +1,5 @@
+// https://www.publicalbum.org/blog/embedding-google-photos-albums
+
 import { Injectable } from '@angular/core';
 
 @Injectable({
