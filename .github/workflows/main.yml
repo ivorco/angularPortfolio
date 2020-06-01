@@ -19,15 +19,23 @@ jobs:
        with:
          node-version: 10.x
 
-     - name: Prepare and deploy
+     - name: Prepare
        env:
          GH_TOKEN: ${{ secrets.GH_TOKEN }}
        run: |
          npm install
          npm run lint
-         ###
+         
+     - name: Test
+       env:
+         GH_TOKEN: ${{ secrets.GH_TOKEN }}
+       run: |
          npm test -- --watch=false --progress=false --browsers=ChromeHeadlessCI
          npm run webdriver-update-ci
          npm run e2e -- --protractor-config=e2e/protractor-ci.conf.js --webdriver-update=false
-         ####
+         
+     - name: Deploy
+       env:
+         GH_TOKEN: ${{ secrets.GH_TOKEN }}
+       run: |
          npm run ng -- deploy --base-href=https://ivorco.github.io/angularPortfolio/ --name="Or" --email=2694823+ivorco@users.noreply.github.com
