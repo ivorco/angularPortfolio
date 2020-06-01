@@ -1,6 +1,6 @@
 <mat-toolbar color="primary">
+  <mat-toolbar-row><h1 class="md-title text-center">Or Cohen</h1></mat-toolbar-row>
   <mat-toolbar-row>
-    <h1>Or Cohen</h1>
     <span class="menu-spacer"></span>
     <div>
       <a mat-button [routerLink]="'/intro'">Intro</a>
@@ -8,13 +8,13 @@
       <a mat-button [routerLink]="'/apps'">Apps</a>
       <a mat-button [routerLink]="'/products'">Products</a>
 
-      <button mat-button [matMenuTriggerFor]="menu">Environments</button>
+      <!-- <button mat-button [matMenuTriggerFor]="menu">Environments</button>
       <mat-menu #menu="matMenu">
         <button mat-menu-item style="font-weight: bold;">Angular</button>
         <button mat-menu-item>React</button>
         <button mat-menu-item>Barebones</button>
         <button mat-menu-item>Wix</button>
-      </mat-menu>
+      </mat-menu> -->
     </div>
   </mat-toolbar-row>
 </mat-toolbar>

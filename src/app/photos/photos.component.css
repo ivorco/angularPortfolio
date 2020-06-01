@@ -1,14 +1,8 @@
 mat-grid-list {
-    display: inline-block;
-    text-align: center;
-    margin-top: 2vh;
+  margin: 5vh;
 }
 
-mat-grid-tile img {
-    width: 25%;
-    height: auto;
-    margin-left: 1vw;
-    margin-right: 1vw;
-    margin-top: 1vh;
-    margin-bottom: 1vh;
-  }
+.tile-image {
+  width: 100%;
+  height: auto;
+}
