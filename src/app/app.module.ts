@@ -16,6 +16,7 @@ import { AppsComponent } from './apps/apps.component';
 import { ProductsComponent } from './products/products.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
+import { D3PrintsComponent } from './d3-prints/d3-prints.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { AppRoutingModule } from './app-routing.module';
     IntroComponent,
     PhotosComponent,
     AppsComponent,
-    ProductsComponent
+    ProductsComponent,
+    D3PrintsComponent
   ],
   imports: [
     BrowserModule,
