@@ -17,6 +17,7 @@ import { AppsComponent } from './apps/apps.component';
 import { ProductsComponent } from './products/products.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
+import { ContactComponent } from './contact/contact.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { AppRoutingModule } from './app-routing.module';
     IntroComponent,
     PhotosComponent,
     AppsComponent,
-    ProductsComponent
+    ProductsComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

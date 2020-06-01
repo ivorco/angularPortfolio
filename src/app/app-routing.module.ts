@@ -5,6 +5,7 @@ import { IntroComponent } from './intro/intro.component';
 import { ProductsComponent } from './products/products.component';
 import { AppsComponent } from './apps/apps.component';
 import { PhotosComponent } from './photos/photos.component';
+import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/intro', pathMatch: 'full' },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'photos', component: PhotosComponent },
   { path: 'apps', component: AppsComponent },
   { path: 'products', component: ProductsComponent },
+  { path: 'contact', component: ContactComponent },
 ];
 
 @NgModule({
