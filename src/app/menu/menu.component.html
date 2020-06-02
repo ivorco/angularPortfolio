@@ -1,12 +1,14 @@
 <mat-toolbar color="primary">
-  <mat-toolbar-row><h1 class="md-title text-center">Or Cohen</h1></mat-toolbar-row>
+  <mat-toolbar-row
+    ><h1 class="md-title text-center">Or Cohen</h1></mat-toolbar-row
+  >
   <mat-toolbar-row>
     <span class="menu-spacer"></span>
-    <div>
+    <div fxShow="true" fxHide.lt-sm="true">
       <a mat-button [routerLink]="'/intro'">Intro</a>
       <a mat-button [routerLink]="'/photos'">Photos</a>
       <a mat-button [routerLink]="'/apps'">Apps</a>
-      <a mat-button [routerLink]="'/products'">Products</a>
+      <a mat-button [routerLink]="'/products'">Designs</a>
       <a mat-button [routerLink]="'/contact'">Contact</a>
 
       <!-- <button mat-button [matMenuTriggerFor]="menu">Environments</button>
@@ -16,6 +18,14 @@
         <button mat-menu-item>Barebones</button>
         <button mat-menu-item>Wix</button>
       </mat-menu> -->
+    </div>
+
+    <div fxShow="true" fxHide.gt-xs="true">
+      <a mat-button [routerLink]="'/intro'"><mat-icon aria-label="Intro">home</mat-icon></a>
+      <a mat-button [routerLink]="'/photos'"><mat-icon aria-label="Photos">camera</mat-icon></a>
+      <a mat-button [routerLink]="'/apps'"><mat-icon aria-label="Apps">apps</mat-icon></a>
+      <a mat-button [routerLink]="'/products'"><mat-icon aria-label="Designs">brush</mat-icon></a>
+      <a mat-button [routerLink]="'/contact'"><mat-icon aria-label="Contact me">contact_mail</mat-icon></a>
     </div>
   </mat-toolbar-row>
 </mat-toolbar>
