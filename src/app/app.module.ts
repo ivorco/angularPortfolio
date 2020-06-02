@@ -19,6 +19,7 @@ import { ProductsComponent } from './products/products.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { ContactComponent } from './contact/contact.component';
+import { ResponsiveButtonComponent } from './responsive-button/responsive-button.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { ContactComponent } from './contact/contact.component';
     PhotosComponent,
     AppsComponent,
     ProductsComponent,
-    ContactComponent
+    ContactComponent,
+    ResponsiveButtonComponent
   ],
   imports: [
     BrowserModule,
