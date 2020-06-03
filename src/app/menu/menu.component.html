@@ -1,15 +1,37 @@
 <mat-toolbar color="primary">
-  <mat-toolbar-row
-    ><h1 class="md-title text-center">Or Cohen</h1></mat-toolbar-row
+  <mat-toolbar-row fxShow="true" fxHide.lt-sm="true"
+    ><h1 class="large-title md-title">Or Cohen</h1></mat-toolbar-row
   >
   <mat-toolbar-row>
-    <span class="menu-spacer"></span>
     <div>
-      <app-responsive-button [routerLink]="'/intro'" icon="home" content="Intro"></app-responsive-button>
-      <app-responsive-button [routerLink]="'/photos'" icon="camera" content="Photos"></app-responsive-button>
-      <app-responsive-button [routerLink]="'/apps'" icon="apps" content="Apps"></app-responsive-button>
-      <app-responsive-button [routerLink]="'/products'" icon="brush" content="Designs"></app-responsive-button>
-      <app-responsive-button [routerLink]="'/contact'" icon="contact_mail" content="Contact"></app-responsive-button>
+      <span fxShow="true" fxHide.gt-xs="true" class="md-title">
+        Or Cohen
+      </span>
+      <app-responsive-button
+        [routerLink]="'/intro'"
+        icon="home"
+        content="Intro"
+      ></app-responsive-button>
+      <app-responsive-button
+        [routerLink]="'/photos'"
+        icon="camera"
+        content="Photos"
+      ></app-responsive-button>
+      <app-responsive-button
+        [routerLink]="'/apps'"
+        icon="apps"
+        content="Apps"
+      ></app-responsive-button>
+      <app-responsive-button
+        [routerLink]="'/products'"
+        icon="brush"
+        content="Designs"
+      ></app-responsive-button>
+      <app-responsive-button
+        [routerLink]="'/contact'"
+        icon="contact_mail"
+        content="Contact"
+      ></app-responsive-button>
 
       <!-- <button mat-button [matMenuTriggerFor]="menu">Environments</button>
       <mat-menu #menu="matMenu">
@@ -18,6 +40,6 @@
         <button mat-menu-item>Barebones</button>
         <button mat-menu-item>Wix</button>
       </mat-menu> -->
-    </div>   
+    </div>
   </mat-toolbar-row>
 </mat-toolbar>

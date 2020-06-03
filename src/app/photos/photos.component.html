@@ -1,7 +1,13 @@
 <div>
-  <mat-grid-list cols="3" rowHeight="2:1" gutterSize="2vh">
+  <mat-grid-list cols="1" rowHeight="2:1" gutterSize="2vh" fxShow="true" fxHide.gt-xs="true">
       <mat-grid-tile *ngFor='let p of photoUrls'>
           <img [src]='p' class="tile-image" >
       </mat-grid-tile>
   </mat-grid-list>
+
+  <mat-grid-list cols="3" rowHeight="2:1" gutterSize="2vh" fxShow="true" fxHide.lt-sm="true">
+    <mat-grid-tile *ngFor='let p of photoUrls'>
+        <img [src]='p' class="tile-image" >
+    </mat-grid-tile>
+</mat-grid-list>
 </div>

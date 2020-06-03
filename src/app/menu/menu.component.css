@@ -1,8 +1,11 @@
-h1 {
+.large-title {
     font-size: 3em;
+    line-height: 1.2;
+}
+
+.md-title {
     vertical-align: middle;
     display: inline-block;
-    line-height: 1.2;
 }
 
 mat-toolbar-row {
