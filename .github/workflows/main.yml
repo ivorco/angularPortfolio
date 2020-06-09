@@ -38,4 +38,4 @@ jobs:
        env:
          GH_TOKEN: ${{ secrets.GH_TOKEN }}
        run: |
-         npm run ng -- deploy --base-href=https://ivorco.github.io/angularPortfolio/ --name="Or" --email=2694823+ivorco@users.noreply.github.com
+         npm run ng -- deploy --base-href=https://www.orcohen.net/ --name="Or" --email=2694823+ivorco@users.noreply.github.com
