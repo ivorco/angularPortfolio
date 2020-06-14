@@ -7,12 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angularPortfolio';
-
-  // book: any = { };
-
-  // constructor(http: HttpClient) {
-  //   http.get('https://api.angular.schule/book/9783864906466')
-  //     .subscribe(b => this.book = b);
-  // }
+  title = 'Or Cohen';
 }
