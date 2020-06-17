@@ -2,6 +2,8 @@
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { CloudinaryModule } from '@cloudinary/angular-5.x';
+import * as  Cloudinary from 'cloudinary-core';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
@@ -45,7 +47,8 @@ import { ResponsiveButtonComponent } from './responsive-button/responsive-button
     MatMenuModule,
     MatGridListModule,
     FlexLayoutModule,
-    MatCardModule
+    MatCardModule,
+    CloudinaryModule.forRoot(Cloudinary, { cloud_name: 'dwoudrcna'}),
   ],
   providers: [],
   bootstrap: [AppComponent]
