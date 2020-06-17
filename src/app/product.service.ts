@@ -15,7 +15,7 @@ export class ProductService {
         type: 'Bicycle light',
         description: 'The HEDRON bicycle light',
         imageUrl:
-          'https://lh3.googleusercontent.com/oo8ke0XLGVk0UaskI8LD4GnXoesQUh6VRoQY5t2N78ULCGP6wQzUbDvB_raVfSw5TzvFKCsjNU8vIXVuGs1_cUhKLYTBN8DHK75QJHSvusNItmnuEzyxvxvQ2o3yC4KuGNmzxKs-bA=w1920-h1080',
+          'https://res.cloudinary.com/dwoudrcna/image/upload/v1592341098/products/DSC01472.JPG_euemlu.jpg',
         imageAlt: 'Bicycle light',
       },
       {
@@ -24,7 +24,7 @@ export class ProductService {
         type: 'MIDI controller',
         description: 'The LAVE MIDI controller',
         imageUrl:
-          'https://lh3.googleusercontent.com/u3CB3MWkOltxy2-7gfKWsuB7JSE7p_mHeX9tSCzr1Sbq07U4K_58VbLJitsIPfW_YJjrhbjLC6NrLP0loSFWwjx9XT8BVXrjcpc6sZuUltEStBp9meD6AzDVZnhd3_ShTeKJBhzeAQ=w1920-h1080',
+          'https://res.cloudinary.com/dwoudrcna/image/upload/v1592341086/products/6_New_Enclosure.JPG_zz0uzp.jpg',
         imageAlt: 'MIDI controller',
       },
       {
@@ -33,7 +33,7 @@ export class ProductService {
         type: 'Electronics',
         description: 'A soldering fume fan',
         imageUrl:
-          'https://lh3.googleusercontent.com/znerP1uUvna178SNaaEWfYBbUyVSbdh9rorseqXF4JyvAkschWY9iRiWaFmjuAv_A2nlC6tB-GHCVTscmCHYFmoggj_qOKvMZl7QCmltRib9szvAxyH8bRV-sKCs-_-6YLk46TptZg=w1920-h1080',
+          'https://res.cloudinary.com/dwoudrcna/image/upload/v1592341091/products/DSC02450.JPG_bhh4px.jpg',
         imageAlt: 'Soldering fume fan',
       },
     ];

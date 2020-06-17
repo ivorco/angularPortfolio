@@ -11,13 +11,14 @@ import { PhotoService } from '../photo.service';
 export class PhotosComponent implements OnInit {
   constructor(private photoService: PhotoService) {}
 
-  photoUrls: string[] = [];
+  photos: string[] = [];
 
   ngOnInit(): void {
     this.getPhotos();
   }
 
-  getPhotos() {
-    this.photoUrls = this.photoService.getPhotos();
+  async getPhotos() {
+    const images = await this.photoService.getPhotos();
+    this.photos = images.map(image => image.public_id);
   }
 }
