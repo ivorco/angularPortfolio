@@ -3,23 +3,23 @@
 import { Injectable } from '@angular/core';
 import { Cloudinary } from '@cloudinary/angular-5.x';
 
+export type Photo = {
+  public_id: string;
+  version: number;
+  format: string;
+  width: number;
+  height: number;
+  type: string;
+  created_at: string;
+};
+
 @Injectable({
   providedIn: 'root',
 })
 export class PhotoService {
   constructor(private cloudinary: Cloudinary) {}
 
-  async getPhotos(): Promise<
-    {
-      public_id: string;
-      version: number;
-      format: string;
-      width: number;
-      height: number;
-      type: string;
-      created_at: string;
-    }[]
-  > {
+  async getPhotos(): Promise<Photo[]> {
     // instead of maintaining the list of images, we rely on the 'photo' tag
     // and simply retrieve a list of all images with that tag.
     const url = this.cloudinary.url('photo', {
