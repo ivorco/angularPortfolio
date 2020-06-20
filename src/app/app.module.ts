@@ -1,9 +1,8 @@
-
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CloudinaryModule } from '@cloudinary/angular-5.x';
-import * as  Cloudinary from 'cloudinary-core';
+import * as Cloudinary from 'cloudinary-core';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
@@ -24,7 +23,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { ContactComponent } from './contact/contact.component';
 import { ResponsiveButtonComponent } from './responsive-button/responsive-button.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +32,7 @@ import { ResponsiveButtonComponent } from './responsive-button/responsive-button
     AppsComponent,
     ProductsComponent,
     ContactComponent,
-    ResponsiveButtonComponent
+    ResponsiveButtonComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,9 +46,9 @@ import { ResponsiveButtonComponent } from './responsive-button/responsive-button
     MatGridListModule,
     FlexLayoutModule,
     MatCardModule,
-    CloudinaryModule.forRoot(Cloudinary, { cloud_name: 'dwoudrcna'}),
+    CloudinaryModule.forRoot(Cloudinary, { cloud_name: 'dwoudrcna' }),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
