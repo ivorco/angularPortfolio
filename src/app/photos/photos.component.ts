@@ -1,7 +1,7 @@
 // https://medium.com/javascript-in-plain-english/how-to-create-an-image-gallery-app-with-angular-903190015aec
 
 import { Component, OnInit } from '@angular/core';
-import { PhotoService } from '../photo.service';
+import { ContentfulService } from '../contentful.service';
 
 @Component({
   selector: 'app-photos',
@@ -9,7 +9,7 @@ import { PhotoService } from '../photo.service';
   styleUrls: ['./photos.component.css'],
 })
 export class PhotosComponent implements OnInit {
-  constructor(private photoService: PhotoService) {}
+  constructor(private contentfullService: ContentfulService) {}
 
   photos: string[] = [];
 
@@ -18,7 +18,8 @@ export class PhotosComponent implements OnInit {
   }
 
   async getPhotos() {
-    const images = await this.photoService.getPhotos();
-    this.photos = images.map(image => image.public_id);
+    let images = await this.contentfullService.getPhotos();
+    this.photos = images.map(image => (String)(image.toPlainObject()))
+    // this.photos = images.map(image => image);
   }
 }
