@@ -7,7 +7,7 @@ const CONFIG = {
 
   contentTypeIds: {
     photo: 'photos',
-    product: 'products'
+    product: 'product'
   },
 };
 
@@ -52,7 +52,7 @@ export class ContentfulService {
       .then((res) => res.items);
 
     return ret.then(res => {
-      return res.map((entry: any) => entry.fields.photo.fields.file.url);
+      return res.map((entry: any) => entry.fields.mainPhoto.fields.file.url);
     });
   }
 }
