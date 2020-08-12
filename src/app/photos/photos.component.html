@@ -7,7 +7,7 @@
     fxHide.gt-xs="true"
   >
     <mat-grid-tile *ngFor="let p of photos">
-      <image width="100%" height="auto" src="p"> </image>
+      <img width="100%" height="auto" src="{{p}}"/>
     </mat-grid-tile>
   </mat-grid-list>
 
@@ -19,7 +19,7 @@
     fxHide.lt-sm="true"
   >
     <mat-grid-tile *ngFor="let p of photos">
-      <image width="100%" height="auto" src="p"> </image>
+      <img width="100%" height="auto" src="{{p}}"/>
     </mat-grid-tile>
   </mat-grid-list>
 </div>

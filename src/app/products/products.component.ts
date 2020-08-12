@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../product';
-import { ProductService } from '../product.service';
+import { ContentfulService } from '../contentful.service';
 
 @Component({
   selector: 'app-products',
@@ -10,13 +10,18 @@ import { ProductService } from '../product.service';
 export class ProductsComponent implements OnInit {
   products: Product[] = [];
 
-  constructor(private productService: ProductService) {}
+  constructor(private contentfullService: ContentfulService) {}
 
   ngOnInit(): void {
     this.getProducts();
   }
 
-  getProducts() {
-    this.products = this.productService.getProducts();
+  async getProducts() {
+    const products = await this.contentfullService.getProducts();
+    this.products = products.map((image) => {
+      const product = {} as Product;
+      product.imageUrl = image.toString();
+      return product;
+    });
   }
 }

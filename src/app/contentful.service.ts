@@ -6,29 +6,53 @@ const CONFIG = {
   accessToken: 'QEyNoiKfu4h2Vs8hQDEaPUiIbBGVOhgcQm5hXIcbtW4',
 
   contentTypeIds: {
-    photo: 'photos'
-  }
-}
+    photo: 'photos',
+    product: 'products'
+  },
+};
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ContentfulService {
   private cdaClient = createClient({
     space: CONFIG.space,
-    accessToken: CONFIG.accessToken
+    accessToken: CONFIG.accessToken,
   });
 
-  constructor() { }
+  constructor() {}
 
   getPhotos(query?: object): Promise<Entry<any>[]> {
-    let ret= this.cdaClient.getEntries(Object.assign({
-      content_type: CONFIG.contentTypeIds.photo
-    }, query))
-    .then(res => res.items);
+    const ret = this.cdaClient
+      .getEntries(
+        Object.assign(
+          {
+            content_type: CONFIG.contentTypeIds.photo,
+          },
+          query
+        )
+      )
+      .then((res) => res.items);
 
-    return ret.then(function(res){
-            return res.map(entry=>entry.fields.photo.fields.file.url)
-   });
+    return ret.then(res => {
+      return res.map((entry: any) => entry.fields.photo.fields.file.url);
+    });
+  }
+
+  getProducts(query?: object): Promise<Entry<any>[]> {
+    const ret = this.cdaClient
+      .getEntries(
+        Object.assign(
+          {
+            content_type: CONFIG.contentTypeIds.product,
+          },
+          query
+        )
+      )
+      .then((res) => res.items);
+
+    return ret.then(res => {
+      return res.map((entry: any) => entry.fields.photo.fields.file.url);
+    });
   }
 }

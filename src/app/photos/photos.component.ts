@@ -18,8 +18,7 @@ export class PhotosComponent implements OnInit {
   }
 
   async getPhotos() {
-    let images = await this.contentfullService.getPhotos();
-    this.photos = images.map(image => (String)(image.toPlainObject()))
-    // this.photos = images.map(image => image);
+    const images = await this.contentfullService.getPhotos();
+    this.photos = images.map((image) => image.toString());
   }
 }
