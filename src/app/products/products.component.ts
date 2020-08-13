@@ -18,8 +18,6 @@ export class ProductsComponent implements OnInit {
 
   async getProducts() {
     const products = await this.contentfullService.getProducts();
-    this.products = products.map(
-      (image) => ({ imageUrl: image.toString() } as Product)
-    );
+    this.products = products;
   }
 }

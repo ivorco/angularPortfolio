@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { createClient, Entry } from 'contentful';
+import { Product } from './product';
+import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 
 const CONFIG = {
   space: 'e5dhqnjmesqg',
@@ -7,7 +9,7 @@ const CONFIG = {
 
   contentTypeIds: {
     photo: 'photos',
-    product: 'product'
+    product: 'product',
   },
 };
 
@@ -34,12 +36,12 @@ export class ContentfulService {
       )
       .then((res) => res.items);
 
-    return ret.then(res => {
+    return ret.then((res) => {
       return res.map((entry: any) => entry.fields.photo.fields.file.url);
     });
   }
 
-  getProducts(query?: object): Promise<Entry<any>[]> {
+  getProducts(query?: object): Promise<Product[]> {
     const ret = this.cdaClient
       .getEntries(
         Object.assign(
@@ -51,8 +53,17 @@ export class ContentfulService {
       )
       .then((res) => res.items);
 
-    return ret.then(res => {
-      return res.map((entry: any) => entry.fields.mainPhoto.fields.file.url);
+    return ret.then((res) => {
+      return res.map((entry: any) => {
+        const product: Product = {
+          title: entry.fields.name,
+          type: entry.fields.type,
+          imageUrl: entry.fields.mainPhoto.fields.file.url,
+          imageAlt: entry.fields.name,
+          description: documentToHtmlString(entry.fields.description),
+        };
+        return product;
+      });
     });
   }
 }
