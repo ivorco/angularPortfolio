@@ -24,7 +24,7 @@ export class ContentfulService {
 
   constructor() {}
 
-  getPhotos(query?: object): Promise<Entry<any>[]> {
+  getPhotos(query?: object): Promise<string[]> {
     const ret = this.cdaClient
       .getEntries(
         Object.assign(
