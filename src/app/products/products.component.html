@@ -12,10 +12,7 @@
           class="tile-image"
           alt="{{ p.imageAlt }}"
         />
-        <mat-card-content>
-          <p>
-            {{ p.description }}
-          </p>
+        <mat-card-content [innerHTML]="p.description">
         </mat-card-content>
         <mat-card-actions>
           <!-- <button mat-button>More info</button> -->
